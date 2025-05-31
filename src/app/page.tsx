@@ -9,7 +9,10 @@ import { AdsSection } from "@/components/landing/adsSection";
 export default function Home() {
   return (
     <div>
-      <AppNavbar />
+       <AppNavbar auth={{
+          login: { title: "Login", url: "/login" },
+          signup: { title: "Sign up", url: "/register" },
+        }} />
       <main>
         <HeroSection />
         <BrandSection />
