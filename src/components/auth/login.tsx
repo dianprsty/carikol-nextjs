@@ -89,7 +89,7 @@ export default function LoginForm() {
 
                         <Button
                             onClick={handleLogin}  // pasang event handler di sini
-                            className="w-full bg-blue-600 hover:bg-teal-500 text-white p-3 rounded-lg font-semibold transition ease-in-out duration-300"
+                            className="w-full bg-primary hover:bg-primary/90 text-white p-3 rounded-lg font-semibold transition ease-in-out duration-300"
                         >
                             Login
                         </Button>
@@ -98,7 +98,7 @@ export default function LoginForm() {
             </div>
 
             {/* RIGHT CONTENT / CAROUSEL */}
-            <div className="hidden md:flex items-center justify-center bg-teal-500">
+            <div className="hidden md:flex items-center justify-center bg-primary">
                 <div className="text-center px-4 py-8">
                     <div className="transition-opacity duration-500 ease-in-out">
                         <Image

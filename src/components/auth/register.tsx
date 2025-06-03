@@ -71,7 +71,7 @@ export default function RegisterForm() {
     return (
         <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
             {/* Right side carousel */}
-            <div className="hidden md:flex items-center justify-center bg-teal-500">
+            <div className="hidden md:flex items-center justify-center bg-primary">
                 <div className="w-full px-4 py-8 text-center">
                     <div className="transition-opacity duration-500 ease-in-out">
                         <Image
@@ -144,7 +144,7 @@ export default function RegisterForm() {
                         />
 
                         <Button
-                            className="w-full bg-blue-600 hover:bg-teal-500 text-white p-3 rounded-lg font-semibold"
+                            className="w-full bg-primary hover:bg-primary/90 text-white p-3 rounded-lg font-semibold"
                             onClick={handleRegister}
                         >
                             Register
