@@ -5,6 +5,10 @@ import StatisticSection from "@/components/landing/StatisticSection";
 import AppNavbar from "@/components/layout/Navbar";
 import { AdsSection } from "@/components/landing/adsSection";
 import FloatingActionButton from "@/components/landing/FloatingActionButton";
+import PrmotionalSection from "@/components/landing/PromotionalSection";
+import ReviewSection from "@/components/landing/ReviewSection";
+import NewsletterSection from "@/components/landing/NewsletterSection";
+import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +26,10 @@ export default function Home() {
         <AdsSection />
         <FaqSection />
         <FloatingActionButton />
+        <PrmotionalSection/>
+        <ReviewSection/>
+        <NewsletterSection/>
+        <Footer/>
       </main>
     </div>
   );
