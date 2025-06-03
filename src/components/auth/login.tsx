@@ -93,6 +93,14 @@ export default function LoginForm() {
                         >
                             Login
                         </Button>
+
+
+                        <div className="text-sm text-center m-auto row">
+                            <span>Don't Have Account? </span>
+                            <Link href="/register" className="text-gray-700  font-bold hover:text-teal-600">
+                                Register Now
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
