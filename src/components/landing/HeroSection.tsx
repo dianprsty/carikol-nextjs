@@ -19,7 +19,7 @@ export default function HeroSection() {
         "CariKOL bantu influencer membuat rate card profesional hanya                dalam hitungan menit. Tinggal Klik Tanpa repot, tanpa ribet.",
       imageSrc: "/images/hero.png",
       buttonText: "Buat Rate Card Sekarang!",
-      buttonLink: "/dashboard",
+      buttonLink: "/kol",
     },
     {
       title: "Gabung dan Tingkatkan Potensimu",
@@ -27,7 +27,7 @@ export default function HeroSection() {
         "Baik Anda kreator maupun brand, semua peluang ada di CariKOL.              Daftar gratis dan mulai hari ini!",
       imageSrc: "/images/hero2.png",
       buttonText: "Gabung Sekarang!",
-      buttonLink: "/dashboard",
+      buttonLink: "/kol",
     },
     {
       title: "Cari KOL Sesuai Kebutuhan Campaign Anda",
@@ -35,7 +35,7 @@ export default function HeroSection() {
         "Filter berdasarkan kategori, audiens, hingga budget. Kolaborasi                jadi lebih tepat sasaran.",
       imageSrc: "/images/hero3.png",
       buttonText: "Lihat Rate Card!",
-      buttonLink: "/dashboard",
+      buttonLink: "/kol",
     },
     {
       title: "Platform Terpercaya dan Aman",
@@ -43,7 +43,7 @@ export default function HeroSection() {
         "Proses transparan, dukungan penuh dari tim kami, dan transaksi             yang terjamin untuk kedua belah pihak.",
       imageSrc: "/images/hero4.png",
       buttonText: "Gabung Sekarang!",
-      buttonLink: "/dashboard",
+      buttonLink: "/kol",
     },
     {
       title: "Platform #1 untuk KOL & Brand",
@@ -51,7 +51,7 @@ export default function HeroSection() {
         "Tingkatkan kolaborasi antar KOL dan Brand, maksimalkan peluang!",
       imageSrc: "/images/hero5.png",
       buttonText: "Gabung Sekarang!",
-      buttonLink: "/dashboard",
+      buttonLink: "/kol",
     },
   ];
   return (
