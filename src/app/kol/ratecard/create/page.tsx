@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -223,12 +224,12 @@ export default function CreateRateCard({}: Props) {
             </div>
           </div>
           <div className="flex justify-end pt-6 mt-4 space-x-4 border-t border-gray-200">
-            <a
-              href="/html/kol/ratecard/index.html"
+            <Link
+              href="/kol/ratecard"
               className="px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-md transition-colors duration-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
             >
               Cancel
-            </a>
+            </Link>
             <button
               type="submit"
               className="flex items-center px-6 py-2.5 text-sm font-medium text-white bg-teal-600 rounded-md transition-colors duration-200 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
