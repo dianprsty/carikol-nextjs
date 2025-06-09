@@ -75,7 +75,7 @@ const AppNavbar = ({
           url: "#",
         },
         {
-          title: "Buat Ratecard Tiktok",
+          title: "Buat Ratecard Youtube",
 
           url: "#",
         },
@@ -95,11 +95,11 @@ const AppNavbar = ({
           url: "#",
         },
         {
-          title: "Cek Ratecard Tiktok",
+          title: "Cek Ratecard Instagram",
           url: "#",
         },
         {
-          title: "Cek Ratecard Tiktok",
+          title: "Cek Ratecard Youtube",
           url: "#",
         },
         {
@@ -116,16 +116,16 @@ const AppNavbar = ({
   },
 }: AppNavbarProps) => {
   return (
-    <section className="py-4 sticky top-0 z-50  backdrop-blur-2xl">
+    <section className="py-4 sticky top-0 z-50  bg-white/80  backdrop-blur-2xl">
       <div className="w-11/12 max-w-7xl mx-auto">
         <nav className="hidden justify-between lg:flex gap-6">
-          <div className="flex items-center gap-6 w-full">
+          <div className="flex items-center sm:gap-6 w-full">
             <a href={logo.url} className="flex items-center gap-2">
               <Image
                 src={logo.src}
-                width={48}
-                height={48}
-                className="max-h-8"
+                width={32}
+                height={32}
+                className="h-8 w-8"
                 alt={logo.alt}
               />
               <div className="text-xl font-bold text-teal-600 sm:text-2xl">
@@ -163,7 +163,7 @@ const AppNavbar = ({
                 width={48}
                 height={48}
                 src={logo.src}
-                className="max-h-8"
+                className="h-8 w-8"
                 alt={logo.alt}
               />
             </a>
@@ -181,7 +181,7 @@ const AppNavbar = ({
                         width={48}
                         height={48}
                         src={logo.src}
-                        className="max-h-8"
+                        className="h-8 w-8"
                         alt={logo.alt}
                       />
                     </a>
@@ -229,7 +229,11 @@ const renderMenuItem = (item: MenuItem) => {
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-popover text-popover-foreground">
           {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className="w-80">
+            <NavigationMenuLink
+              asChild
+              key={item.title + subItem.title}
+              className="w-80"
+            >
               <SubMenuLink item={subItem} />
             </NavigationMenuLink>
           ))}
@@ -253,8 +257,8 @@ const renderMenuItem = (item: MenuItem) => {
 const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
-      <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
+      <AccordionItem key={item.title} value={item.title} className="border-0">
+        <AccordionTrigger className="text-md py-2 font-semibold hover:no-underline">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">

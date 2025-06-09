@@ -1,5 +1,5 @@
 import { AppSidebar } from "@/components/sidebar/AppSidebar";
-import { SiteHeader } from "@/components/site-header";
+import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export default function KolDashboardLayout({
@@ -23,7 +23,7 @@ export default function KolDashboardLayout({
         <SiteHeader title={title} />
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+            <div className="flex flex-col gap-4 py-4 md:gap-6">
               {children}
             </div>
           </div>

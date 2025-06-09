@@ -44,12 +44,12 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/kol",
       icon: GaugeIcon,
     },
     {
       title: "My Ratecard",
-      url: "#",
+      url: "/kol/ratecard",
       icon: IdCardIcon,
     },
     {
