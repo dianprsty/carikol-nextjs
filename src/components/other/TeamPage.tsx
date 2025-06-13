@@ -261,11 +261,11 @@ export default function TeamSection() {
                 <div className="px-6 mt-20 ml-0 sm:ml-24 sm:mr-24 sm:px-16 md:pt-24 lg:flex lg:gap-x-10 lg:px-0 lg:pt-0">
                     <AnimatedOnScroll delay={0.1}>
                         <div className="text-center lg:mx-10 lg:flex-auto lg:text-left">
-                            
+
                             {Profile.map((item, index) => {
                                 if (index === 2) {
                                     return <div key={index}>
-                                         <h2 className="font-semibold text-teal-600 text-base/7">
+                                        <h2 className="font-semibold text-teal-600 text-base/7">
                                             As Kak {item.nama.split(" ")[0]}
                                         </h2>
                                         <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
