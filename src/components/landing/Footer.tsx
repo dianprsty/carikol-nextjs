@@ -97,10 +97,10 @@ export default function Footer() {
             <div className="pb-2 font-bold text-gray-800">COMMUNITY</div>
             <div className="flex flex-col space-y-2">
               {[
-                { text: "About Us", href: "/app/about/page.tsx" },
-                { text: "Team", href: "#" },
+                { text: "About Us", href: "/about" },
+                { text: "Team", href: "/team" },
                 { text: "Testimonial", href: "#" },
-                { text: "Tutorials", href: "#" },
+                { text: "Kamus Kol", href: "/kamus" },
                 { text: "Smart Guides", href: "#" },
               ].map((link, idx) => (
                 <Link href={link.href} key={idx} className="text-gray-600 hover:text-teal-600 block">
