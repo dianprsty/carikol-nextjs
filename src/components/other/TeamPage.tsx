@@ -142,11 +142,18 @@ export default function TeamSection() {
                                 {Profile.map((item, index) => {
                                     if (item.nama === "Muhammad Dzulfiqar") {
                                         return item.buttonElement.map((subItem, subindex) => {
-                                            let selectURL = ""
-                                            subItem.title === "Github" ? selectURL = subItem.url : subItem.title === "Linkedin" ? selectURL = subItem.url : subItem.title === "Instagram" ? selectURL = subItem.url : null
+                                            let selectUrl = "";
+
+                                            if (subItem.title === "Github") {
+                                                selectUrl = subItem.url;
+                                            } else if (subItem.title === "Linkedin") {
+                                                selectUrl = subItem.url;
+                                            } else if (subItem.title === "Instagram") {
+                                                selectUrl = subItem.url;
+                                            }
 
                                             return <Button key={subindex} variant="default" size="default" asChild>
-                                                <a href={selectURL} target="_blank" rel="noopener noreferrer">
+                                                <a href={selectUrl} target="_blank" rel="noopener noreferrer">
                                                     {subItem.title}
                                                 </a>
                                             </Button>
@@ -220,9 +227,15 @@ export default function TeamSection() {
                                 {Profile.map((item, index) => {
                                     if (item.nama === "Dhian Prasetyo") {
                                         return item.buttonElement.map((subItem, subIndex) => {
-                                            let selectUrl = "#"
-                                            subItem.title === "Github" ?
-                                                selectUrl = subItem.url : subItem.title === "Linkedin" ? selectUrl = subItem.url : subItem.title === "Instagram" ? selectUrl = subItem.url : null
+                                            let selectUrl = "";
+
+                                            if (subItem.title === "Github") {
+                                                selectUrl = subItem.url;
+                                            } else if (subItem.title === "Linkedin") {
+                                                selectUrl = subItem.url;
+                                            } else if (subItem.title === "Instagram") {
+                                                selectUrl = subItem.url;
+                                            }
 
                                             return (
                                                 <Button key={subIndex} variant="default" size="default" asChild>
@@ -248,9 +261,13 @@ export default function TeamSection() {
                 <div className="px-6 mt-20 ml-0 sm:ml-24 sm:mr-24 sm:px-16 md:pt-24 lg:flex lg:gap-x-10 lg:px-0 lg:pt-0">
                     <AnimatedOnScroll delay={0.1}>
                         <div className="text-center lg:mx-10 lg:flex-auto lg:text-left">
+                            
                             {Profile.map((item, index) => {
                                 if (index === 2) {
                                     return <div key={index}>
+                                         <h2 className="font-semibold text-teal-600 text-base/7">
+                                            As Kak {item.nama.split(" ")[0]}
+                                        </h2>
                                         <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
                                             {item.nama}
                                         </p>
@@ -265,11 +282,18 @@ export default function TeamSection() {
                                 {Profile.map((item, index) => {
                                     if (item.nama === "Dhafina") {
                                         return item.buttonElement.map((subItem, subindex) => {
-                                            let selectURL = ""
-                                            subItem.title === "Github" ? selectURL = subItem.url : subItem.title === "Linkedin" ? selectURL = subItem.url : subItem.title === "Instagram" ? selectURL = subItem.url : null
+                                            let selectUrl = "";
+
+                                            if (subItem.title === "Github") {
+                                                selectUrl = subItem.url;
+                                            } else if (subItem.title === "Linkedin") {
+                                                selectUrl = subItem.url;
+                                            } else if (subItem.title === "Instagram") {
+                                                selectUrl = subItem.url;
+                                            }
 
                                             return <Button key={subindex} variant="default" size="default" asChild>
-                                                <a href={selectURL} target="_blank" rel="noopener noreferrer">
+                                                <a href={selectUrl} target="_blank" rel="noopener noreferrer">
                                                     {subItem.title}
                                                 </a>
                                             </Button>
