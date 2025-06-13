@@ -643,21 +643,29 @@ export default function KamusSection() {
             <div className="py-16 bg-white sm:py-20 -z-30">
                 <div className="px-6 mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
                     <AnimatedOnScroll delay={0}>
-                        <div className="bg-teal-500  mb-5 m-auto py-5 px-36 :px-12 rounded-full">
+                        <div className="bg-teal-500 mb-5 m-auto py-5 sm:py-10 px-12 lg:px-12 rounded-xl">
                             <h2 className="font-semibold text-center text-black text-base/7">
                                 Selamat Datang Di, <span className='text-white'>Kamus Kol</span>
                             </h2>
                             <p className="mx-auto mt-2 max-w-lg text-4xl font-semibold tracking-tight text-center text-black text-balance sm:text-5xl">
                                 Cari tahu tentang dunia <span className='text-white'>KOL</span>
                             </p>
+
+                            {/* Pembungkus input */}
+                            <div className="mt-6 flex justify-center">
+                                <input
+                                    type="text"
+                                    placeholder="Cari istilah atau definisi..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+                                    className="w-full max-w-md border border-gray-300 px-5 py-3 rounded-full  text-sm shadow-md
+             focus:outline-none focus:ring-2 focus:ring-white focus:border-white
+             placeholder-black placeholder-opacity-100 transition-all duration-300"
+                                />
+                            </div>
                         </div>
-                        <input
-                            type="text"
-                            placeholder="Cari istilah atau definisi..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
-                            className="mb-8 w-full border border-gray-300 px-4 py-3 rounded-lg text-sm"
-                        />
+
+
 
                     </AnimatedOnScroll>
 
