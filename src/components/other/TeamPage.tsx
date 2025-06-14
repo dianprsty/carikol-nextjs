@@ -166,89 +166,90 @@ export default function TeamSection() {
                 </div>
             </section>
 
-        <div className="p-0 mx-auto sm:mb-10">
-  <div className="px-6 mt-20 ml-0 sm:ml-24 sm:mr-24 sm:px-16  lg:flex lg:gap-x-10 lg:px-0 lg:pt-0">
-    <AnimatedOnScroll delay={0.1}>
-      <div className="text-center lg:mx-10 lg:flex-auto lg:text-left">
-        {Profile.map((item, index) => {
-          const { nama, motivasi } = item;
-          if (index === 0) {
-            return (
-              <div key={index}>
-                <h2 className="font-semibold text-teal-600 text-base/7">
-                  As Kak {nama.split(" ")[0]}
-                </h2>
-                <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
-                  {nama}
-                </p>
-                <p className="mt-6 w-[1000px] max-w-full md:w-[600px] sm:w-full text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
-                  {motivasi}
-                </p>
-              </div>
-            );
-          }
-          return null;
-        })}
+            <div className="p-0 mx-auto sm:mb-10">
+                <div className="px-6 mt-20 ml-0 sm:ml-24 sm:mr-24 sm:px-16  lg:flex lg:gap-x-10 lg:px-0 lg:pt-0">
+                    <AnimatedOnScroll delay={0.1}>
+                        <div className="text-center lg:mx-10 lg:flex-auto lg:text-left">
+                            {Profile.map((item, index) => {
+                                const { nama, motivasi } = item
+                                if (index === 0) {
+                                    return <div key={index}>
+                                        <h2 className="font-semibold text-teal-600 text-base/7">
+                                            As Kak {nama.split(" ")[0]}
+                                        </h2>
+                                        <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
+                                            {nama}
+                                        </p>
+                                        <p className="mt-6 w-[750px] max-w-full md:w-[600px] sm:w-full text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
+                                            {motivasi}
+                                        </p>
 
-        <div className="flex gap-x-6 justify-center items-center py-5 lg:justify-start">
-          {Profile.map((item, index) => {
-            if (item.nama === "Dian Prasetyo") {
-              return item.buttonElement.map((subItem, subIndex) => {
-                const { url, title, Color } = subItem;
+                                    </div>
+                                }
+                                return null
+                            })}
 
-                const gradient = Color.via
-                  ? `linear-gradient(to right, ${Color.from}, ${Color.via}, ${Color.to})`
-                  : `linear-gradient(to right, ${Color.from}, ${Color.to})`;
+                            <div className="flex gap-x-6 justify-center items-center py-5 lg:justify-start">
 
-                return (
-                  <Button
-                    key={subIndex}
-                    variant="default"
-                    size="default"
-                    asChild
-                    style={{
-                      background: gradient,
-                      color: Color.text,
-                      border: "none",
-                    }}
-                  >
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      {title}
-                    </a>
-                  </Button>
-                );
-              });
-            }
+                                {Profile.map((item, index) => {
+                                    if (item.nama === "Dian Prasetyo") {
+                                        return item.buttonElement.map((subItem, subIndex) => {
+                                            const { url, title, Color } = subItem;
 
-            return null;
-          })}
-        </div>
-      </div>
-    </AnimatedOnScroll>
+                                            // Bangun gradasi background-nya
+                                            const gradient = Color.via
+                                                ? `linear-gradient(to right, ${Color.from}, ${Color.via}, ${Color.to})`
+                                                : `linear-gradient(to right, ${Color.from}, ${Color.to})`;
 
-    <AnimatedOnScroll delay={0.3}>
-      <div className="overflow-hidden relative z-10 flex justify-center items-center">
-        {Profile.map((item, index) => {
-          const { nama, image } = item;
-          if (nama === "Dian Prasetyo") {
-            return (
-              <Image
-                key={index}
-                className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10  h-auto"
-                src={image}
-                alt="App screenshot"
-                width={350}
-                height={350}
-              />
-            );
-          }
-          return null;
-        })}
-      </div>
-    </AnimatedOnScroll>
-  </div>
-</div>
+                                            return (
+                                                <Button
+                                                    key={subIndex}
+                                                    variant="default"
+                                                    size="default"
+                                                    asChild
+                                                    style={{
+                                                        background: gradient,
+                                                        color: Color.text,
+                                                        border: 'none',
+                                                    }}
+                                                >
+                                                    <a href={url} target="_blank" rel="noopener noreferrer">
+                                                        {title}
+                                                    </a>
+                                                </Button>
+                                            );
+                                        });
+                                    }
 
+                                    return null;
+                                })}
+
+                            </div>
+
+
+                        </div>
+                    </AnimatedOnScroll>
+
+                    <AnimatedOnScroll delay={0.3}>
+                        <div className="overflow-hidden relative z-10">
+                            {Profile.map((item, index) => {
+                                const { nama, image } = item
+                                if (nama === "Dian Prasetyo") {
+                                    return <Image key={index}
+                                        className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10"
+                                        src={image}
+                                        alt="App screenshot"
+                                        width={1200}
+                                        height={1000}
+                                    />
+                                }
+                                return null
+                            })}
+
+                        </div>
+                    </AnimatedOnScroll>
+                </div>
+            </div>
 
             <hr />
 
