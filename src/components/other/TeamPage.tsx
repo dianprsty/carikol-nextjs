@@ -239,8 +239,8 @@ export default function TeamSection() {
                                         className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10"
                                         src={image}
                                         alt="App screenshot"
-                                        width={1100}
-                                        height={1000}
+                                        width={500}
+                                        height={500}
                                     />
                                 }
                                 return null
@@ -251,86 +251,86 @@ export default function TeamSection() {
                 </div>
             </div>
 
-    <div className="mx-auto mb-3">
-  <div className="px-6 mt-10 mr-0 sm:mr-24 sm:ml-24 lg:mt-0 sm:px-16 lg:flex lg:items-center lg:gap-x-10 lg:px-0 lg:pt-0">
-    <AnimatedOnScroll delay={0.2}>
-      <div className="overflow-hidden relative z-10 flex justify-center items-center">
-        {Profile.map((item, index) => {
-          const { nama, image } = item;
-          if (nama === "Muhammad Dzulfiqar") {
-            return (
-              <Image
-                key={index}
-                className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10 w-[250px] h-auto lg:w-[350px]"
-                src={image}
-                alt="App screenshot"
-                width={400}
-                height={400}
-              />
-            );
-          }
-          return null;
-        })}
-      </div>
-    </AnimatedOnScroll>
+            <div className="mx-auto mb-3">
+                <div className="px-6 mt-10 mr-0 sm:mr-24 sm:ml-24 lg:mt-0 sm:px-16 lg:flex lg:items-center lg:gap-x-10 lg:px-0 lg:pt-0">
+                    <AnimatedOnScroll delay={0.2}>
+                        <div className="overflow-hidden relative z-10 flex justify-center items-center">
+                            {Profile.map((item, index) => {
+                                const { nama, image } = item;
+                                if (nama === "Muhammad Dzulfiqar") {
+                                    return (
+                                        <Image
+                                            key={index}
+                                            className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10 w-[250px] h-auto lg:w-[350px]"
+                                            src={image}
+                                            alt="App screenshot"
+                                            width={400}
+                                            height={400}
+                                        />
+                                    );
+                                }
+                                return null;
+                            })}
+                        </div>
+                    </AnimatedOnScroll>
 
-    <div className="py-5 pr-0 mx-auto text-center sm:pr-5 lg:mx-0 lg:flex-auto lg:py-20 lg:text-left lg:w-1/2">
-      <AnimatedOnScroll delay={0.4}>
-        {Profile.map((item, index) => {
-          const { nama, motivasi } = item;
-          if (nama === "Muhammad Dzulfiqar") {
-            return (
-              <div key={index}>
-                <h2 className="font-semibold text-teal-600 text-base/7">
-                  As Kak {nama.split(" ")[1].substring(0, 4)}
-                </h2>
-                <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 text-pretty lg:text-4xl md:text-base">
-                  {nama}
-                </p>
-                <p className="mt-6 text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
-                  {motivasi}
-                </p>
-              </div>
-            );
-          }
-          return null;
-        })}
+                    <div className="py-5 pr-0 mx-auto text-center sm:pr-5 lg:mx-0 lg:flex-auto lg:py-20 lg:text-left lg:w-1/2">
+                        <AnimatedOnScroll delay={0.4}>
+                            {Profile.map((item, index) => {
+                                const { nama, motivasi } = item;
+                                if (nama === "Muhammad Dzulfiqar") {
+                                    return (
+                                        <div key={index}>
+                                            <h2 className="font-semibold text-teal-600 text-base/7">
+                                                As Kak {nama.split(" ")[1].substring(0, 4)}
+                                            </h2>
+                                            <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 text-pretty lg:text-4xl md:text-base">
+                                                {nama}
+                                            </p>
+                                            <p className="mt-6 text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
+                                                {motivasi}
+                                            </p>
+                                        </div>
+                                    );
+                                }
+                                return null;
+                            })}
 
-        <div className="flex gap-x-6 justify-center items-center py-5 lg:justify-start">
-          {Profile.map((item, index) => {
-            if (item.nama === "Muhammad Dzulfiqar") {
-              return item.buttonElement.map((subItem, subindex) => {
-                const { title, url, Color } = subItem;
-                const gradient = Color.via
-                  ? `linear-gradient(to right, ${Color.from}, ${Color.via}, ${Color.to})`
-                  : `linear-gradient(to right, ${Color.from}, ${Color.to})`;
+                            <div className="flex gap-x-6 justify-center items-center py-5 lg:justify-start">
+                                {Profile.map((item, index) => {
+                                    if (item.nama === "Muhammad Dzulfiqar") {
+                                        return item.buttonElement.map((subItem, subindex) => {
+                                            const { title, url, Color } = subItem;
+                                            const gradient = Color.via
+                                                ? `linear-gradient(to right, ${Color.from}, ${Color.via}, ${Color.to})`
+                                                : `linear-gradient(to right, ${Color.from}, ${Color.to})`;
 
-                return (
-                  <Button
-                    key={subindex}
-                    variant="default"
-                    size="default"
-                    asChild
-                    style={{
-                      background: gradient,
-                      color: Color.text,
-                      border: 'none',
-                    }}
-                  >
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      {title}
-                    </a>
-                  </Button>
-                );
-              });
-            }
-            return null;
-          })}
-        </div>
-      </AnimatedOnScroll>
-    </div>
-  </div>
-</div>
+                                            return (
+                                                <Button
+                                                    key={subindex}
+                                                    variant="default"
+                                                    size="default"
+                                                    asChild
+                                                    style={{
+                                                        background: gradient,
+                                                        color: Color.text,
+                                                        border: 'none',
+                                                    }}
+                                                >
+                                                    <a href={url} target="_blank" rel="noopener noreferrer">
+                                                        {title}
+                                                    </a>
+                                                </Button>
+                                            );
+                                        });
+                                    }
+                                    return null;
+                                })}
+                            </div>
+                        </AnimatedOnScroll>
+                    </div>
+                </div>
+            </div>
 
 
             <div className="p-0 mx-auto sm:mb-10">
