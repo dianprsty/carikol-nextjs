@@ -171,32 +171,31 @@ export default function TeamSection() {
                     <AnimatedOnScroll delay={0.1}>
                         <div className="text-center lg:mx-10 lg:flex-auto lg:text-left">
                             {Profile.map((item, index) => {
-                                const { nama, motivasi } = item
+                                const { nama, motivasi } = item;
                                 if (index === 0) {
-                                    return <div key={index}>
-                                        <h2 className="font-semibold text-teal-600 text-base/7">
-                                            As Kak {nama.split(" ")[0]}
-                                        </h2>
-                                        <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
-                                            {nama}
-                                        </p>
-                                        <p className="mt-6 w-[750px] max-w-full md:w-[600px] sm:w-full text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
-                                            {motivasi}
-                                        </p>
-
-                                    </div>
+                                    return (
+                                        <div key={index}>
+                                            <h2 className="font-semibold text-teal-600 text-base/7">
+                                                As Kak {nama.split(" ")[0]}
+                                            </h2>
+                                            <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
+                                                {nama}
+                                            </p>
+                                            <p className="mt-6 w-[750px] max-w-full md:w-[600px] sm:w-full text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
+                                                {motivasi}
+                                            </p>
+                                        </div>
+                                    );
                                 }
-                                return null
+                                return null;
                             })}
 
                             <div className="flex gap-x-6 justify-center items-center py-5 lg:justify-start">
-
                                 {Profile.map((item, index) => {
                                     if (item.nama === "Dian Prasetyo") {
                                         return item.buttonElement.map((subItem, subIndex) => {
                                             const { url, title, Color } = subItem;
 
-                                            // Bangun gradasi background-nya
                                             const gradient = Color.via
                                                 ? `linear-gradient(to right, ${Color.from}, ${Color.via}, ${Color.to})`
                                                 : `linear-gradient(to right, ${Color.from}, ${Color.to})`;
@@ -210,7 +209,7 @@ export default function TeamSection() {
                                                     style={{
                                                         background: gradient,
                                                         color: Color.text,
-                                                        border: 'none',
+                                                        border: "none",
                                                     }}
                                                 >
                                                     <a href={url} target="_blank" rel="noopener noreferrer">
@@ -223,33 +222,33 @@ export default function TeamSection() {
 
                                     return null;
                                 })}
-
                             </div>
-
-
                         </div>
                     </AnimatedOnScroll>
 
                     <AnimatedOnScroll delay={0.3}>
-                        <div className="overflow-hidden relative z-10">
+                        <div className="overflow-hidden relative z-10 flex justify-center items-center">
                             {Profile.map((item, index) => {
-                                const { nama, image } = item
+                                const { nama, image } = item;
                                 if (nama === "Dian Prasetyo") {
-                                    return <Image key={index}
-                                        className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10"
-                                        src={image}
-                                        alt="App screenshot"
-                                            width={400}
-                                            height={400}
-                                    />
+                                    return (
+                                        <Image
+                                            key={index}
+                                            className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10 w-[250px] lg:w-[350px] h-auto"
+                                            src={image}
+                                            alt="App screenshot"
+                                            width={1000}
+                                            height={350}
+                                        />
+                                    );
                                 }
-                                return null
+                                return null;
                             })}
-
                         </div>
                     </AnimatedOnScroll>
                 </div>
             </div>
+
 
             <hr />
 
