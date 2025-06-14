@@ -167,9 +167,9 @@ export default function TeamSection() {
             </section>
 
             <div className="p-0 mx-auto sm:mb-10">
-                <div className="px-6 mt-20 ml-0 sm:ml-24 sm:mr-24 sm:px-16  lg:flex lg:gap-x-10 lg:px-0 lg:pt-0">
+                <div className="px-6 mt-20 ml-0 sm:ml-24 sm:mr-24 sm:px-16 lg:flex lg:items-start lg:justify-between lg:gap-x-10 lg:px-0 lg:pt-0">
                     <AnimatedOnScroll delay={0.1}>
-                        <div className="text-center lg:mx-10 lg:flex-auto lg:text-left">
+                        <div className="lg:w-3/5 text-left">
                             {Profile.map((item, index) => {
                                 const { nama, motivasi } = item;
                                 if (index === 0) {
@@ -181,7 +181,7 @@ export default function TeamSection() {
                                             <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
                                                 {nama}
                                             </p>
-                                            <p className="mt-6 text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
+                                            <p className="mt-6 text-gray-600 text-sm lg:text-lg md:text-base">
                                                 {motivasi}
                                             </p>
                                         </div>
@@ -190,7 +190,7 @@ export default function TeamSection() {
                                 return null;
                             })}
 
-                            <div className="flex gap-x-6 justify-center items-center py-5 lg:justify-start">
+                            <div className="flex gap-x-6 items-center py-5 lg:justify-start">
                                 {Profile.map((item, index) => {
                                     if (item.nama === "Dian Prasetyo") {
                                         return item.buttonElement.map((subItem, subIndex) => {
@@ -219,7 +219,6 @@ export default function TeamSection() {
                                             );
                                         });
                                     }
-
                                     return null;
                                 })}
                             </div>
@@ -227,7 +226,7 @@ export default function TeamSection() {
                     </AnimatedOnScroll>
 
                     <AnimatedOnScroll delay={0.3}>
-                        <div className="overflow-hidden relative z-10 flex justify-center items-center">
+                        <div className="overflow-hidden relative z-10 flex justify-center items-center mt-10 lg:mt-0 lg:w-2/5">
                             {Profile.map((item, index) => {
                                 const { nama, image } = item;
                                 if (nama === "Dian Prasetyo") {
@@ -236,8 +235,8 @@ export default function TeamSection() {
                                             key={index}
                                             className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10 w-[250px] lg:w-[350px] h-auto"
                                             src={image}
-                                            alt="App screenshot"
-                                            width={1200}
+                                            alt="Foto Dian"
+                                            width={350}
                                             height={350}
                                         />
                                     );
@@ -248,6 +247,7 @@ export default function TeamSection() {
                     </AnimatedOnScroll>
                 </div>
             </div>
+
 
 
             <hr />
