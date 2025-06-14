@@ -234,7 +234,7 @@ export default function TeamSection() {
             return (
               <Image
                 key={index}
-                className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10 w-[250px] lg:w-[350px] h-auto"
+                className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10  h-auto"
                 src={image}
                 alt="App screenshot"
                 width={350}
