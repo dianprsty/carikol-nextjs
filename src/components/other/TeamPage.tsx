@@ -236,8 +236,8 @@ export default function TeamSection() {
                                             className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10 w-[250px] lg:w-[350px] h-auto"
                                             src={image}
                                             alt="Foto Dian"
-                                            width={350}
-                                            height={350}
+                                            width={1200}
+                                            height={500}
                                         />
                                     );
                                 }
