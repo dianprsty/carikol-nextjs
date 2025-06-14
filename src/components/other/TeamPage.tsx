@@ -181,7 +181,7 @@ export default function TeamSection() {
                                             <p className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 lg:text-4xl md:text-base">
                                                 {nama}
                                             </p>
-                                            <p className="mt-6 w-[750px] max-w-full md:w-[600px] sm:w-full text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
+                                            <p className="mt-6 text-sm text-gray-600 lg:text-lg md:text-base text-pretty">
                                                 {motivasi}
                                             </p>
                                         </div>
