@@ -230,7 +230,7 @@ export default function TeamSection() {
 
                     {/* FOTO DI KANAN */}
                     <AnimatedOnScroll delay={0.3}>
-                        <div className="overflow-hidden relative z-10 flex justify-center items-center mt-10 lg:mt-0 lg:w-2/5">
+                        <div className="overflow-hidden relative z-10 flex justify-center items-center mt-10 lg:mt-0">
                             {Profile.map((item, index) => {
                                 const { nama, image } = item;
                                 if (nama === "Dian Prasetyo") {
