@@ -239,8 +239,8 @@ export default function TeamSection() {
                                         className="rounded-full border-2 border-teal-500 ring-4 bg-teal-600/5 ring-white/10"
                                         src={image}
                                         alt="App screenshot"
-                                        width={1200}
-                                        height={1000}
+                                            width={400}
+                                            height={400}
                                     />
                                 }
                                 return null
