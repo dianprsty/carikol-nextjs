@@ -171,7 +171,7 @@ export default function TeamSection() {
 
                     {/* TEKS DI KIRI */}
                     <AnimatedOnScroll delay={0.1}>
-                        <div className="lg:w-3/5 text-left mt-10 lg:mt-0">
+                        <div className=" text-left mt-10 lg:mt-0">
                             {Profile.map((item, index) => {
                                 const { nama, motivasi } = item;
                                 if (nama === "Dian Prasetyo") {
