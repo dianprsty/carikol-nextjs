@@ -64,7 +64,7 @@ const data = {
     },
     {
       title: "Pesanan",
-      url: "#",
+      url: "/kol/pesanan", // Ubah URL dari "#" menjadi "/kol/pesanan"
       icon: ShoppingBagIcon,
     },
   ],
