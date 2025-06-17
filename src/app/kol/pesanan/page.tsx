@@ -179,9 +179,9 @@ export default function PesananPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Semua Harga</SelectItem>
-                  <SelectItem value="low"> Rp 3.000.000</SelectItem>
+                  <SelectItem value="low"> {'<'} Rp 3.000.000</SelectItem>
                   <SelectItem value="medium">Rp 3.000.000 - Rp 5.000.000</SelectItem>
-                  <SelectItem value="high"> Rp 5.000.000</SelectItem>
+                  <SelectItem value="high"> {'>'} Rp 5.000.000</SelectItem>
                 </SelectContent>
               </Select>
             </div>
