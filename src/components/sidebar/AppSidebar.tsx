@@ -54,7 +54,7 @@ const data = {
     },
     {
       title: "Explore Ratecard",
-      url: "#",
+      url: "/kol/ratecard/explore",
       icon: SearchCheckIcon,
     },
     {

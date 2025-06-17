@@ -1,10 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import FormField from "@/components/kol/FormField";
 
 type Props = {};
 
 export default function CreateRateCard({}: Props) {
+  const accountOptions = [
+    { value: "instagram_account", label: "@instagram" },
+    { value: "youtube_account", label: "Youtube Channel" },
+    { value: "tiktok_account", label: "@tiktok" },
+  ];
+
+  const contentTypeOptions = [
+    { value: "instagram_post", label: "Instagram Post" },
+    { value: "instagram_reels", label: "Instagram Reels" },
+    { value: "instagram_story", label: "Instagram Story" },
+    { value: "instagram_carousel", label: "Instagram Carousel" },
+    { value: "youtube_video", label: "YouTube Video" },
+    { value: "youtube_shorts", label: "YouTube Shorts" },
+    { value: "youtube_live", label: "YouTube Live" },
+    { value: "tiktok_video", label: "TikTok Video" },
+    { value: "tiktok_live", label: "TikTok LIVE" },
+  ];
+
   return (
     <main
       id="main-content"
@@ -25,93 +44,22 @@ export default function CreateRateCard({}: Props) {
         </div>
         <form className="">
           <div className="grid grid-cols-1 gap-x-6 gap-y-6 md:grid-cols-2">
-            <div className="space-y-2">
-              <label
-                htmlFor="platform"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                Account
-              </label>
-              <div className="relative">
-                <select
-                  id="platform"
-                  name="platform"
-                  className="block w-full px-4 py-3 mt-1 text-sm bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-teal-500 focus:border-teal-500"
-                >
-                  <option value="">Select Account</option>
-                  <option
-                    value="instagram_account"
-                    className="flex items-center"
-                  >
-                    @instagram
-                  </option>
-                  <option value="youtube_account" className="flex items-center">
-                    Youtube Channel
-                  </option>
-                  <option value="tiktok_account" className="flex items-center">
-                    @tiktok
-                  </option>
-                </select>
-                <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-                  <svg
-                    className="w-4 h-4 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label
-                htmlFor="contentType"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                Content Type
-              </label>
-              <div className="relative">
-                <select
-                  id="contentType"
-                  name="contentType"
-                  className="block w-full px-4 py-3 mt-1 text-sm bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-teal-500 focus:border-teal-500"
-                >
-                  <option value="">Choose Content Type</option>
-                  <option value="instagram_post">Instagram Post</option>
-                  <option value="instagram_reels">Instagram Reels</option>
-                  <option value="instagram_story">Instagram Story</option>
-                  <option value="instagram_carousel">Instagram Carousel</option>
-                  <option value="youtube_video">YouTube Video</option>
-                  <option value="youtube_shorts">YouTube Shorts</option>
-                  <option value="youtube_live">YouTube Live</option>
-                  <option value="tiktok_video">TikTok Video</option>
-                  <option value="tiktok_live">TikTok LIVE</option>
-                </select>
-                <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-                  <svg
-                    className="w-4 h-4 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <FormField 
+              id="platform" 
+              label="Account" 
+              type="select" 
+              options={accountOptions} 
+              placeholder="Select Account" 
+            />
+            
+            <FormField 
+              id="contentType" 
+              label="Content Type" 
+              type="select" 
+              options={contentTypeOptions} 
+              placeholder="Choose Content Type" 
+            />
+            
             <div className="space-y-2">
               <label
                 htmlFor="duration"
@@ -223,18 +171,19 @@ export default function CreateRateCard({}: Props) {
               />
             </div>
           </div>
-          <div className="flex justify-end pt-6 mt-4 space-x-4 border-t border-gray-200">
+          ]
+          <div className="flex justify-end mt-8 space-x-4">
             <Link
               href="/kol/ratecard"
-              className="px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 rounded-md transition-colors duration-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+              className="px-6 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
             >
               Cancel
             </Link>
             <button
               type="submit"
-              className="flex items-center px-6 py-2.5 text-sm font-medium text-white bg-teal-600 rounded-md transition-colors duration-200 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+              className="px-6 py-2 text-sm font-medium text-white bg-teal-600 rounded-lg hover:bg-teal-700"
             >
-              Create Ratecard
+              Save Ratecard
             </button>
           </div>
         </form>

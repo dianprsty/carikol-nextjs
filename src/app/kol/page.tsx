@@ -1,4 +1,6 @@
 import Image from "next/image";
+import StatCard from "@/components/kol/StatCard";
+import CampaignStatusGrid from "@/components/kol/CampaignStatusGrid";
 
 export const metadata = {
   title: "Kol Dashboard",
@@ -15,19 +17,13 @@ export default function Page() {
         className="space-y-4 duration-300 animate-in fade-in"
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div className="p-6 transition-all duration-300 transform bg-white border border-gray-100 shadow-sm rounded-xl hover:shadow-md hover:-translate-y-1">
-            <div>
-              <div className="mb-1 text-sm font-medium text-gray-500">
-                Total Pendapatan
-              </div>
-              <div className="text-2xl font-bold text-gray-800">
-                Rp 15.000.000
-              </div>
-              <div className="flex items-center mt-2 text-xs text-green-600">
-                +12% dari bulan lalu
-              </div>
-            </div>
-          </div>
+          <StatCard 
+            title="Total Pendapatan" 
+            value="Rp 15.000.000" 
+            change="+12% dari bulan lalu" 
+            isPositive={true} 
+          />
+          
           <div className="p-6 transition-all duration-300 transform bg-white border border-gray-100 shadow-sm rounded-xl hover:shadow-md hover:-translate-y-1">
             <div className="flex justify-between">
               <div>
@@ -36,37 +32,19 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-2 mt-4">
-              <div className="p-2 text-center rounded-lg bg-teal-50">
-                <div className="text-xs text-gray-500">Berjalan</div>
-                <div className="font-bold text-teal-600">2</div>
-              </div>
-              <div className="p-2 text-center rounded-lg bg-yellow-50">
-                <div className="text-xs text-gray-500">Menunggu</div>
-                <div className="font-bold text-yellow-600">1</div>
-              </div>
-              <div className="p-2 text-center rounded-lg bg-green-50">
-                <div className="text-xs text-gray-500">Selesai</div>
-                <div className="font-bold text-green-600">5</div>
-              </div>
-            </div>
+            <CampaignStatusGrid running={2} waiting={1} completed={5} />
           </div>
-          <div className="p-6 transition-all duration-300 transform bg-white border border-gray-100 shadow-sm rounded-xl hover:shadow-md hover:-translate-y-1">
-            <div className="flex justify-between">
-              <div>
-                <div className="mb-1 text-sm font-medium text-gray-500">
-                  Tawaran Baru
-                </div>
-                <div className="text-2xl font-bold text-gray-800">7</div>
-              </div>
-            </div>
+          
+          <StatCard title="Tawaran Baru" value="7">
             <div className="mt-4">
               <button className="w-full py-2 text-sm text-white transition-colors duration-200 bg-teal-600 rounded-lg hover:bg-teal-700">
                 Lihat Semua Tawaran
               </button>
             </div>
-          </div>
+          </StatCard>
         </div>
+        
+        {/* Rest of the dashboard content remains the same */}
         <div className="grid gap-6 mt-4 lg:grid-cols-2">
           <div className="p-6 bg-white border border-gray-100 shadow-sm rounded-xl">
             <div className="flex items-center justify-between mb-6">
