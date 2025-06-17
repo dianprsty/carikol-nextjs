@@ -105,7 +105,7 @@ const AppNavbar = ({
         {
           title: "Cari KOL",
 
-          url: "#",
+          url: "/brand",
         },
       ],
     },
