@@ -67,22 +67,22 @@ const AppNavbar = ({
         {
           title: "Buat Ratecard Tiktok",
 
-          url: "#",
+          url: "/kol",
         },
         {
           title: "Buat Ratecard Instaram",
 
-          url: "#",
+          url: "/kol",
         },
         {
           title: "Buat Ratecard Youtube",
 
-          url: "#",
+          url: "/kol",
         },
         {
           title: "Cari Campaign",
 
-          url: "#",
+          url: "kol",
         },
       ],
     },
@@ -92,15 +92,15 @@ const AppNavbar = ({
       items: [
         {
           title: "Cek Ratecard Tiktok",
-          url: "#",
+          url: "/brand",
         },
         {
           title: "Cek Ratecard Instagram",
-          url: "#",
+          url: "/brand",
         },
         {
           title: "Cek Ratecard Youtube",
-          url: "#",
+          url: "/brand",
         },
         {
           title: "Cari KOL",
