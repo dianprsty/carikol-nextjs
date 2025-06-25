@@ -1,4 +1,4 @@
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import {
   Accordion,
@@ -65,29 +65,24 @@ const AppNavbar = ({
       url: "#",
       items: [
         {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
+          title: "Buat Ratecard Tiktok",
+
+          url: "/kol",
         },
         {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
+          title: "Buat Ratecard Instaram",
+
+          url: "/kol",
         },
         {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
+          title: "Buat Ratecard Youtube",
+
+          url: "/kol",
         },
         {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          title: "Cari Campaign",
+
+          url: "kol",
         },
       ],
     },
@@ -96,48 +91,41 @@ const AppNavbar = ({
       url: "#",
       items: [
         {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
+          title: "Cek Ratecard Tiktok",
+          url: "/brand",
         },
         {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
+          title: "Cek Ratecard Instagram",
+          url: "/brand",
         },
         {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
+          title: "Cek Ratecard Youtube",
+          url: "/brand",
         },
         {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
+          title: "Cari KOL",
+
+          url: "/brand",
         },
       ],
     },
   ],
   auth = {
-    login: { title: "Login", url: "#" },
-    signup: { title: "Sign up", url: "#" },
+    login: { title: "Login", url: "/login" },
+    signup: { title: "Sign up", url: "/register" },
   },
 }: AppNavbarProps) => {
   return (
-    <section className="py-4 sticky top-0 z-50  backdrop-blur-2xl">
+    <section className="py-4 sticky top-0 z-50  bg-white/80  backdrop-blur-2xl">
       <div className="w-11/12 max-w-7xl mx-auto">
         <nav className="hidden justify-between lg:flex gap-6">
-          <div className="flex items-center gap-6 w-full">
+          <div className="flex items-center sm:gap-6 w-full">
             <a href={logo.url} className="flex items-center gap-2">
               <Image
                 src={logo.src}
-                width={48}
-                height={48}
-                className="max-h-8"
+                width={32}
+                height={32}
+                className="h-8 w-8"
                 alt={logo.alt}
               />
               <div className="text-xl font-bold text-teal-600 sm:text-2xl">
@@ -146,7 +134,7 @@ const AppNavbar = ({
             </a>
             <div className="flex w-full items-center justify-end">
               <NavigationMenu>
-                <NavigationMenuList>
+                <NavigationMenuList className="flex gap-6">
                   {menu.map((item) => renderMenuItem(item))}
                 </NavigationMenuList>
               </NavigationMenu>
@@ -175,7 +163,7 @@ const AppNavbar = ({
                 width={48}
                 height={48}
                 src={logo.src}
-                className="max-h-8"
+                className="h-8 w-8"
                 alt={logo.alt}
               />
             </a>
@@ -193,7 +181,7 @@ const AppNavbar = ({
                         width={48}
                         height={48}
                         src={logo.src}
-                        className="max-h-8"
+                        className="h-8 w-8"
                         alt={logo.alt}
                       />
                     </a>
@@ -236,10 +224,16 @@ const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+        <NavigationMenuTrigger className="bg-transparent hover:bg-white">
+          {item.title}
+        </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-popover text-popover-foreground">
           {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className="w-80">
+            <NavigationMenuLink
+              asChild
+              key={item.title + subItem.title}
+              className="w-80"
+            >
               <SubMenuLink item={subItem} />
             </NavigationMenuLink>
           ))}
@@ -263,8 +257,8 @@ const renderMenuItem = (item: MenuItem) => {
 const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
-      <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
+      <AccordionItem key={item.title} value={item.title} className="border-0">
+        <AccordionTrigger className="text-md py-2 font-semibold hover:no-underline">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">

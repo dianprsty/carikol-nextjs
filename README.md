@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CariKOL - Influencer Marketing Platform
 
-## Getting Started
+## Overview
 
-First, run the development server:
+CariKOL is a comprehensive influencer marketing platform designed to connect brands with Key Opinion Leaders (KOLs) in Indonesia. The platform streamlines the process of finding, evaluating, and collaborating with influencers, making influencer marketing more accessible and efficient for brands while providing KOLs with tools to showcase their value professionally.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Key Features
+
+- **For Brands**: Dashboard to manage campaigns, explore KOLs, and track offers
+- **For KOLs**: Professional rate card creation, campaign management, and performance tracking
+- **Dual Interface**: Separate dashboards for brands and KOLs with tailored features
+- **Comprehensive Profiles**: Detailed KOL profiles with audience demographics, engagement metrics, and content samples
+
+## Live Demo
+
+[CariKOL Platform](https://carikol.netlify.app/)
+
+## Repository
+
+[GitHub Repository](https://github.com/dianprsty/carikol-nextjs)
+
+## Requirements
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm 9.x or higher (or yarn/pnpm/bun)
+
+### Dependencies
+
+- Next.js 15.x
+- React 19.x
+- TailwindCSS
+- Radix UI components
+- Framer Motion
+- Various UI libraries (see package.json for complete list)
+
+## Setup and Installation
+
+### Development Environment
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/dianprsty/carikol-nextjs.git
+   cd carikol-nextjs
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. Run the development server
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
+
+### Production Environment
+
+1. Build the application
+   ```bash
+   npm run build
+   # or
+   yarn build
+   # or
+   pnpm build
+   # or
+   bun build
+   ```
+
+2. Start the production server
+   ```bash
+   npm run start
+   # or
+   yarn start
+   # or
+   pnpm start
+   # or
+   bun start
+   ```
+
+### Deployment
+
+The project is configured for easy deployment on Netlify:
+
+1. Connect your GitHub repository to Netlify
+2. Configure build settings:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+3. Set environment variables as needed
+
+## Project Structure
+
+```
+├── public/          # Static assets
+├── src/
+│   ├── app/         # Next.js app router pages
+│   ├── components/  # Reusable UI components
+│   ├── hooks/       # Custom React hooks
+│   └── lib/         # Utility functions
+└── ...configuration files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributors
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Dian Prasetyo](https://github.com/dianprsty)
+- [Muhammad Dzulfiqar](https://github.com/dzulfiqar03)
+- [Dhafina](https://github.com/Dhafina)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Screenshots
 
-## Learn More
+### Landing Page
+![Landing Page](/public/images/screenshot/landing.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Login Page
+![Login Page](/public/images/screenshot/login.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Registration Page
+![Registration Page](/public/images/screenshot/register.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### KOL Dashboard
+![KOL Dashboard](/public/images/screenshot/dashboard-kol.png)
 
-## Deploy on Vercel
+### Brand Dashboard
+![Brand Dashboard](/public/images/screenshot/dashboard-brand.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Create Rate Card
+![Create Rate Card](/public/images/screenshot/create-ratecard.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Explore Rate Card
+![Explore Rate Card](/public/images/screenshot/explore-ratecard.png)
+
+### About Us
+![About Us](/public/images/screenshot/about-us.png)
+
+### Team
+![Team](/public/images/screenshot/team.png)
+
+### KOL Dictionary
+![KOL Dictionary](/public/images/screenshot/kamus-kol.png)
+
